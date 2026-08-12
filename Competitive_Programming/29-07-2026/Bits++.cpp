@@ -1,3 +1,4 @@
+//codeforces problem 282A, Round 173 (Div. 2)
 #include <iostream>
 using namespace std;
 
