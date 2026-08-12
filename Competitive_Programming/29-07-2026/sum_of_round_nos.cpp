@@ -1,34 +1,44 @@
 // Codeforces Problem 1352A, Round 640 (Div. 4)
 #include <iostream>
-#include <vector>
 using namespace std;
 
 int main() {
-    int n;
+    int t;
+    cin >> t;
 
-    cout << "Enter the number: ";
-    cin >> n;
+    while (t--) {
+        int n;
+        cin >> n;
 
-    vector<int> placeValues = {1000, 100, 10, 1};
-    vector<int> parts;
+        int temp = n;
+        int count = 0;
 
-    for (int place : placeValues) {
-        int digit = n / place;
-
-        if (digit != 0) {
-            parts.push_back(digit * place);
-            n = n % place;
+        // Count non-zero digits
+        while (temp > 0) {
+            if (temp % 10 != 0) {
+                count++;
+            }
+            temp /= 10;
         }
+
+        cout << count << endl;
+
+        // Generate round numbers
+        int place = 1;
+
+        while (n > 0) {
+            int digit = n % 10;
+
+            if (digit != 0) {
+                cout << digit * place << " ";
+            }
+
+            n /= 10;
+            place *= 10;
+        }
+
+        cout << endl;
     }
-
-    for (int i = 0; i < parts.size(); i++) {
-        cout << parts[i];
-
-        if (i != parts.size() - 1)
-            cout << " + ";
-    }
-
-    cout << endl;
 
     return 0;
 }
