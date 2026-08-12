@@ -1,4 +1,4 @@
-//codeforces problem 282A, Round 173 (Div. 2)
+//codeforces problem 282D, Round 173 (Div. 2)
 
 #include <bits/stdc++.h>
 using namespace std;
