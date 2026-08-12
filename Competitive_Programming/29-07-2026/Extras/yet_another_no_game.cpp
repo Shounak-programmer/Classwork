@@ -1,3 +1,5 @@
+//codeforces problem 282A, Round 173 (Div. 2)
+
 #include <bits/stdc++.h>
 using namespace std;
 const int MAXV = 300;
